@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" href="project.css"> -->
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- style -->
+    <style>
+        /* common classes */
+        
+        .section {
+            padding: 50px 2px;
+        }
+        
+        .section-head {
+            color: black;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .section-head:after {
+            background-color: rgb(245, 91, 91);
+            content: "";
+            /* display: inline-block ; */
+            display: block;
+            width: 100px;
+            height: 3px;
+            margin: 20px auto;
+        }
+        
+        .image {
+            width: 100%;
+            height: 300px;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
+        /* nav-bar */
+        
+        #header {
+            color: white;
+            background-color: rgb(245, 91, 91);
+        }
+        
+        #logo {
+            font-size: 2rem;
+            margin-top: 5px;
+        }
+        
+        #menu {
+            list-style-type: none;
+            margin: 0%;
+            padding: 0%;
+        }
+        
+        #menu li {
+            display: inline-block;
+        }
+        
+        #menu li a {
+            color: white;
+            padding: 16px 10px;
+            display: block;
+        }
+        
+        #menu li a:hover {
+            background-color: rgb(172, 19, 19);
+            color: black;
+            text-decoration: none;
+        }
+        /* banner */
+        
+        #banner {
+            background-image: url('./images/2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .banner-title {
+            margin-top: 5rem;
+        }
+        
+        .banner-title h1 {
+            background: rgba(255, 254, 254, 0.7);
+            display: inline-block;
+            padding: 10px;
+            margin: 0%;
+        }
+        
+        .banner-title p.lead {
+            color: white;
+            background-color: rgba(245, 91, 91, 0.7);
+            padding: 10px;
+        }
+        /* sercies section */
+        
+        .service-box {
+            text-align: center;
+            border: 2px solid rgb(245, 91, 91);
+            border-radius: 20px;
+            margin: 10px 2px;
+        }
+        
+        .service-box i.fa {
+            color: rgb(245, 91, 91);
+            font-size: 70px;
+        }
+        /* testimonial-section */
+        
+        .testimonial {
+            background-image: url('./images/9.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: white;
+            position: relative;
+        }
+        
+        .testimonial:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgb(105, 102, 102, 0.3);
+        }
+        
+        .image-border-radius {
+            width: 150px;
+            height: 150px;
+            border-radius: 100px;
+        }
+        /* news section */
+        
+        .news-post h3 a {
+            color: rgb(245, 91, 91);
+            text-decoration: none;
+        }
+        
+        .news-post a.readmore {
+            color: rgb(245, 91, 91);
+        }
+        
+        .post-date {
+            content: "\f133";
+            font-family: FontAwesome;
+            padding-right: 5px;
+        }
+        /* footer-sidebar */
+        
+        #footer-sidebar {
+            color: white;
+            background-color: rgb(100, 97, 97);
+            padding: 20px 2px;
+        }
+        
+        .footer-widget a {
+            color: white;
+        }
+        
+        .footer-widget h4::after {
+            content: "";
+            width: 100px;
+            height: 2px;
+            display: block;
+            background-color: white;
+            margin: 5px 0;
+        }
+        
+        ul.latest-news {
+            /* list-style-type: none; */
+        }
+        
+        ul.latest-news li a {
+            text-decoration: none;
+            color: white;
+        }
+        /* Main footer */
+        
+        #footer {
+            background-color: rgb(10, 10, 10, 0.8);
+            color: white;
+        }
+        /* media querries */
+        
+        @media (max-width:768px) {
+            .banner-title {
+                margin-top: 2rem;
+            }
+            .banner-title h1 {
+                font-size: 1.7rem;
+            }
+            .banner-title p.lead {
+                font-size: 1rem;
+            }
+            .testimonial div.col-md-6 {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            .footer-widget {
+                padding: 11px 2px;
+                margin: 2px 2px;
+            }
+            #footer {
+                text-align: center;
+            }
+            .service-box {
+                margin-bottom: 0px;
+            }
+            #menu {
+                text-align: center;
+            }
+        }
+        
+        @media(min-width:770px) {
+            .testimonial div.col-md-6 {
+                text-align: center;
+                margin: 25px 0px;
+            }
+        }
+        
+        @media (max-width:989px) {
+            #logo {
+                font-size: 1.5rem;
+                padding: 7px 2px;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width:475px) {
+            #menu li a {
+                padding: 6px 8px;
+            }
+        }
+        
+        @media(max-width:992px) {
+            .news-post {
+                padding: 3px 2px;
+                margin: 12px 2px;
+            }
+        }
+        
+        div.news-post p {
+            margin: 5px 0;
+        }
+    </style>
+    <title>bootstrap layouts</title>
+</head>
+
+<body>
+    <div class="" id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h1 id="logo">Company Name</h1>
+                </div>
+                <div class="col-md-8 ">
+                    <ul id="menu" class="float-md-right ">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">Our Services</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- banner/hero section -->
+    <div id="banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-lg-6 ">
+                    <div class="banner-title ">
+                        <h1 class="title">Some heading goes here</h1>
+                        <p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente rerum, debitis facilis numquam eum quasi distinctio natus neque hic et!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- services section -->
+    <div class="container section">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="section-head">Our Services</h2>
+            </div>
+            <div class="col-md-4 col-sm-6 ">
+                <div class="service-box">
+                    <i class="fa fa-anchor" aria-hidden="true"></i>
+                    <h3>some heading</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, nisi?</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="service-box">
+                    <i class="fa fa-anchor" aria-hidden="true"></i>
+                    <h3>some heading</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, nisi?</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="service-box">
+                    <i class="fa fa-anchor" aria-hidden="true"></i>
+                    <h3>some heading</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, nisi?</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Testimonear section -->
+    <div class="container testimonial">
+        <div class="row">
+            <div class="col-12">
+
+                <h2 class="section-head text-white">Our Testimonials</h2>
+            </div>
+            <div class="col-md-6 ">
+
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, qui! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, qui!
+                </p>
+                <img class="image-border-radius" src="./images/6.jpg" alt="">
+                <div class="author">mr.perfect</div>
+                <div class="author-company">Microsoft</div>
+
+            </div>
+            <div class="col-md-6 ">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, qui! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, qui!
+                </p>
+                <img class="image-border-radius" src="./images/7.jpg" alt="">
+                <div class="author">mr.takla</div>
+                <div class="author-company">Microsoft</div>
+            </div>
+        </div>
+    </div>
+    <!-- news section -->
+    <div id="news" class="container section">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="section-head">Recent News</h2>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="news-post">
+                    <img class="image" src="./images/3.jpg" alt="">
+                    <h3><a href="http://" target="_blank" rel="noopener noreferrer">News Heading Here</a></h3>
+                    <div class="post-date">April 29,2020</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, quam?</p>
+                    <a href="http://" class="readmore" target="_blank" rel="noopener noreferrer">Read More</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="news-post">
+                    <img class="image" src="./images/4.jpg" alt="">
+                    <h3><a href="http://" target="_blank" rel="noopener noreferrer">News Heading Here</a></h3>
+                    <div class="post-date">April 29,2020</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, quam?</p>
+                    <a href="http://" class="readmore" target="_blank" rel="noopener noreferrer">Read More</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="news-post">
+                    <img class="image" src="./images/5.jpg" alt="">
+                    <h3><a href="http://" target="_blank" rel="noopener noreferrer">News Heading Here</a></h3>
+                    <div class="post-date">April 29,2020</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, quam?</p>
+                    <a href="http://" class="readmore" target="_blank" rel="noopener noreferrer">Read More</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="news-post">
+                    <img class="image" src="./images/8.jpg" alt="">
+                    <h3><a href="http://" target="_blank" rel="noopener noreferrer">News Heading Here</a></h3>
+                    <div class="post-date">April 29,2020</div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, quam?</p>
+                    <a href="http://" class="readmore" target="_blank" rel="noopener noreferrer">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-sidebar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="footer-widget">
+                        <h4>About Company</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, quibusdam cupiditate at dignissimos itaque explicabo!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, facere.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="footer-widget">
+                        <h4>Latest News</h4>
+                        <ul class="latest-news ">
+                            <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                            <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                            <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                            <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                            <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="footer-widget">
+                        <h4>Company Address </h4>
+                        <Address>
+                            <b>New Company</b>
+                            555 Hill Road, Abala Cantt <br>
+                            Haryana, INDIA 133001 <br>
+                            p:9213615182
+                        </Address>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">@Copyright 18018</div>
+                <div class="col-md-6 ">
+                    <div id="social-icons " class="float-md-right">Social icons</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
